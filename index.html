@@ -56,7 +56,6 @@
 		function connect2broker(host,port,topic,user,pass)
 		{
 			window.TOPICS=[]; //clear all topics
-			$("#afterConnection").html("<hr><div class='col center'><p><i><u>Detected Topics</u></i></p></div></div><div class='row' id='select_plot_topic'></div>"); //clear
 
 			// Create a client instance
 			client_id= "clientId_" + parseInt(Math.random()*1000,10);
@@ -79,6 +78,8 @@
 			client.connect({userName:user, password:pass,onSuccess:()=>{
 				console.log("ISA -> MQTT connected");
 				client.subscribe(topic);
+
+				$("#afterConnection").html("<hr><div class='col center'><p><i><u>Detected Topics</u></i></p></div></div><div class='row' id='select_plot_topic'></div>"); //clear
 			}});
 		}
 
