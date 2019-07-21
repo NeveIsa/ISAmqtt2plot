@@ -112,7 +112,7 @@
                         }
                         
 			// connect the client
-                        client.connect({onSuccess:()=>{
+                        client.connect({userName:user,password:pass,onSuccess:()=>{
                                 console.log("ISA -> MQTT connected");
                                 client.subscribe(window.topic);
                         }});
