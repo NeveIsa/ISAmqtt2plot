@@ -5,8 +5,8 @@ Simple example of plotting live numbered data from a subscribed mqtt/websockets 
 
 ##### Demo Images
 
-![landing](0.png)
-![landing](1.png)
-![connected](2.png)
-![plotting](3.png)
+![landing](docs/0.png)
+![landing](docs/1.png)
+![connected](docs/2.png)
+![plotting](docs/3.png)
 
