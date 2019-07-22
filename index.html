@@ -71,6 +71,8 @@
 				else 
 				{
 					console.log("topic: "+ message.destinationName);
+					console.log("payload: "+ message.payloadString);
+
 					window.TOPICS.push( message.destinationName );
 					$("#select_plot_topic").append("<button class='outline' value='" + message.destinationName +"' onclick='plotHandler(this)'>"+message.destinationName+"</button>")
 					$("#select_plot_topic").show();
