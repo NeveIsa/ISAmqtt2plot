@@ -24,7 +24,7 @@
 		<form id='mqttform' class='row'>
 			<div class='col'><input required name='mqtthost' type="text" value="localhost" placeholder="MQTT Broker Host"/></div>
 			<div class='col'><input required name='mqttport' type="number" value="9001" placeholder="MQTT Broker Port"/></div>
-			<div class='col'><input required name='mqtttopicbase' type="text" value="hello" placeholder="MQTT Base topic"/></div>
+			<div class='col'><input required name='mqtttopicbase' type="text" value="#" placeholder="MQTT Base topic"/></div>
 			<div class='col'><input name='mqttuser' type="text" placeholder="MQTT Auth username"/></div>
 			<div class='col'><input name='mqttpass' type="password" placeholder="MQTT Auth password"/></div>
 		</form>
@@ -93,12 +93,13 @@
 
 			if(mqtttopicbase=='#' || mqtttopicbase=='+'); //pass
 			else mqtttopicbase+="/#"
-
+			
+			console.log("ISA -> mqtttopicbase : " + mqtttopicbase);
 		        	
 
 			if(mqtthost=="" || mqttport=="" || mqtttopicbase=="")
 			{
-				alert("Host, Port and Topics can not be empty !");
+				alert("Host and Port and Topics can not be empty !");
 				return false;
 			}
 
