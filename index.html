@@ -87,9 +87,12 @@
 		$('#connect_button').on('click',()=>{
 			let mqtthost=$("input[name=mqtthost]").val();
 			let mqttport=Number($("input[name=mqttport]").val());
-			let mqtttopicbase=$("input[name=mqtttopicbase]").val()+"/#";
+			let mqtttopicbase=$("input[name=mqtttopicbase]").val();
 			let mqttuser=$("input[name=mqttuser]").val();
 			let mqttpass=$("input[name=mqttpass]").val();
+
+			if(mqtttopicbase=='#' || mqtttopicbase=='+'); //pass
+			else mqtttopicbase+="/#"
 
 		        	
 
